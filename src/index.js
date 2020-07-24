@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 import 'bootstrap/dist/css/bootstrap.css';
-import './assets/styles/global.css';
+import './global.css';
 
 // Pages
 import BadgeNew from './pages/BadgeNew';
