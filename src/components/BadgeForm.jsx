@@ -1,18 +1,18 @@
 import React from 'react';
 
-const BadgeForm = () => {
+const BadgeForm = ({ handleChangeForm }) => {
 
     var elementsForm = {};
 
-    var [ elementsForm, setElementsForm ] = React.useState(elementsForm);
+    // var [ elementsForm, setElementsForm ] = React.useState(elementsForm);
 
-    const handleChange = e => {
-        const name = e.target.name;
-        const value = e.target.value;
+    // const handleChange = e => {
+    //     const name = e.target.name;
+    //     const value = e.target.value;
 
-        setElementsForm(elementsForm => ({ ...elementsForm, [name]: value}));
+    //     setElementsForm(elementsForm => ({ ...elementsForm, [name]: value}));
         
-    };
+    // };
 
     const handleClick = e => {
         console.log('Button was clicked');
@@ -31,7 +31,7 @@ const BadgeForm = () => {
                 <div className="form-group">
                     <label>First Name</label>
                     <input
-                    onChange={handleChange}
+                    onChange={handleChangeForm}
                     className="form-control"
                     type="text"
                     name="firstName"
@@ -42,7 +42,7 @@ const BadgeForm = () => {
                 <div className="form-group">
                     <label>Last Name</label>
                     <input
-                    onChange={handleChange}
+                    onChange={handleChangeForm}
                     className="form-control"
                     type="text"
                     name="lastName"
@@ -53,7 +53,7 @@ const BadgeForm = () => {
                 <div className="form-group">
                     <label>Email</label>
                     <input
-                    onChange={handleChange}
+                    onChange={handleChangeForm}
                     className="form-control"
                     type="email"
                     name="email"
@@ -64,7 +64,7 @@ const BadgeForm = () => {
                 <div className="form-group">
                     <label>Job title</label>
                     <input
-                    onChange={handleChange}
+                    onChange={handleChangeForm}
                     className="form-control"
                     type="text"
                     name="jobTitle"
@@ -75,7 +75,7 @@ const BadgeForm = () => {
                 <div className="form-group">
                     <label>Twitter</label>
                     <input
-                    onChange={handleChange}
+                    onChange={handleChangeForm}
                     className="form-control"
                     type="text"
                     name="twitter"
