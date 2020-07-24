@@ -22,7 +22,7 @@ const BadgeNew = () => (
                     lastName="Rodríguez"
                     twitter="bryansrm"
                     jobTitle="Frontend Engineer"
-                    avatarUrl="https://lh3.googleusercontent.com/proxy/M0qyLCfbJxfMnaL2RvCv_6dm_W6qLIEEebB-yVzB9fmS-T30RoL1KrGr6tRlX2XjeMCtR-d59qvaG5szwD5YJIl2I_X-mViq-XIqe_tMj48C"
+                    avatarUrl="https://images.vexels.com/media/users/3/145908/preview2/52eabf633ca6414e60a7677b0b917d92-creador-de-avatar-masculino.jpg"
                 />
                 </div>
                 <div className="col">

@@ -2,11 +2,16 @@ import React from 'react';
 
 const BadgeForm = () => {
 
+    var elementsForm = {};
+
+    var [ elementsForm, setElementsForm ] = React.useState(elementsForm);
+
     const handleChange = e => {
-        console.log({
-        name: e.target.name,
-        value: e.target.value,
-        });
+        const name = e.target.name;
+        const value = e.target.value;
+
+        setElementsForm(elementsForm => ({ ...elementsForm, [name]: value}));
+        
     };
 
     const handleClick = e => {
@@ -30,6 +35,51 @@ const BadgeForm = () => {
                     className="form-control"
                     type="text"
                     name="firstName"
+                    value={elementsForm.firstName}
+                    />
+                </div>
+
+                <div className="form-group">
+                    <label>Last Name</label>
+                    <input
+                    onChange={handleChange}
+                    className="form-control"
+                    type="text"
+                    name="lastName"
+                    value={elementsForm.lastName}
+                    />
+                </div>
+
+                <div className="form-group">
+                    <label>Email</label>
+                    <input
+                    onChange={handleChange}
+                    className="form-control"
+                    type="email"
+                    name="email"
+                    value={elementsForm.email}
+                    />
+                </div>
+
+                <div className="form-group">
+                    <label>Job title</label>
+                    <input
+                    onChange={handleChange}
+                    className="form-control"
+                    type="text"
+                    name="jobTitle"
+                    value={elementsForm.jobTitle}
+                    />
+                </div>
+
+                <div className="form-group">
+                    <label>Twitter</label>
+                    <input
+                    onChange={handleChange}
+                    className="form-control"
+                    type="text"
+                    name="twitter"
+                    value={elementsForm.twitter}
                     />
                 </div>
 
