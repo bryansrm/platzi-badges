@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 import '../components/styles/Badges.css';
 import confLogo from '../assets/images/badge-header.svg';
-import Navbar from '../components/NavBar';
 import BadgesList from '../components/BadgesList';
 
 
@@ -46,8 +45,6 @@ const Badges = () => {
 
     return(
         <div>
-            <Navbar />
-
             <div className="Badges">
             <div className="Badges__hero">
                 <div className="Badges__container">
