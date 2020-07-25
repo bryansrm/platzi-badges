@@ -9,11 +9,12 @@ import './global.css';
 
 // Pages
 import BadgeNew from './pages/BadgeNew';
+import Badges from './pages/Badges';
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <BadgeNew />
+    {/* <BadgeNew /> */}
+    <Badges />
   </React.StrictMode>,
   document.getElementById('root')
 );
