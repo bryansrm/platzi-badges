@@ -1,7 +1,7 @@
 import React from 'react';
 
 import header from '../assets/images/badge-header.svg';
-
+import './styles/BadgeNew.css';
 import Badge from '../components/Badge';
 import BadgeForm from '../components/BadgeForm';
 
