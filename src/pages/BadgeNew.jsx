@@ -4,11 +4,15 @@ import header from '../assets/images/badge-header.svg';
 import './styles/BadgeNew.css';
 import Badge from '../components/Badge';
 import BadgeForm from '../components/BadgeForm';
-
+import api from '../api';
+import { Redirect, useHistory } from 'react-router-dom';
 
 const BadgeNew = () => {
 
-    var form = {};
+    const history = useHistory();
+    var form = {
+        avatarUrl: 'https://www.gravatar.com/avatar/0fc6d5ee2ee176d4581acf6a7e5644cc?d=identicon'
+    };
 
     var [ form, setElementsForm ] = React.useState(form);
 
@@ -19,6 +23,20 @@ const BadgeNew = () => {
         setElementsForm(elementsForm => ({ ...form, [name]: value}));
         
     };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        try{
+            await api.badges.create(form);
+            
+            history.push("/badges");
+        }
+        catch( error ){
+            // this.setState({ loading: false, error });
+            console.log(error);
+        }
+    }
     
     return(
         <div>
@@ -38,7 +56,10 @@ const BadgeNew = () => {
                     />
                     </div>
                     <div className="col">
-                        <BadgeForm handleChangeForm={handleChange} />
+                        <BadgeForm 
+                            onSubmit={handleSubmit}
+                            onChange={handleChange} 
+                        />
                     </div>
                 </div>
             </div>

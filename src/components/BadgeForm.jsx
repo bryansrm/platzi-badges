@@ -1,6 +1,6 @@
 import React from 'react';
 
-const BadgeForm = ({ handleChangeForm }) => {
+const BadgeForm = ({ onSubmit, onChange }) => {
 
     var elementsForm = {};
 
@@ -27,11 +27,11 @@ const BadgeForm = ({ handleChangeForm }) => {
         <div>
             <h1>New Attendant</h1>
 
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={onSubmit}>
                 <div className="form-group">
                     <label>First Name</label>
                     <input
-                    onChange={handleChangeForm}
+                    onChange={onChange}
                     className="form-control"
                     type="text"
                     name="firstName"
@@ -42,7 +42,7 @@ const BadgeForm = ({ handleChangeForm }) => {
                 <div className="form-group">
                     <label>Last Name</label>
                     <input
-                    onChange={handleChangeForm}
+                    onChange={onChange}
                     className="form-control"
                     type="text"
                     name="lastName"
@@ -53,7 +53,7 @@ const BadgeForm = ({ handleChangeForm }) => {
                 <div className="form-group">
                     <label>Email</label>
                     <input
-                    onChange={handleChangeForm}
+                    onChange={onChange}
                     className="form-control"
                     type="email"
                     name="email"
@@ -64,7 +64,7 @@ const BadgeForm = ({ handleChangeForm }) => {
                 <div className="form-group">
                     <label>Job title</label>
                     <input
-                    onChange={handleChangeForm}
+                    onChange={onChange}
                     className="form-control"
                     type="text"
                     name="jobTitle"
@@ -75,7 +75,7 @@ const BadgeForm = ({ handleChangeForm }) => {
                 <div className="form-group">
                     <label>Twitter</label>
                     <input
-                    onChange={handleChangeForm}
+                    onChange={onChange}
                     className="form-control"
                     type="text"
                     name="twitter"
