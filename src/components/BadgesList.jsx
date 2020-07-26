@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import '../components/styles/BadgesList.css';
 
@@ -25,6 +26,17 @@ const BadgesListItem = ({ badge }) => {
 }
 
 const BadgesList = ({ listbadges }) => {
+
+    if( listbadges.length == 0 ){
+        return (
+            <div className="text-center mt-5 pt-5">
+                <h2>Not exist badges</h2>
+                <Link to="/badges/new" className="btn btn-primary">
+                    Create new badge
+                </Link>
+            </div>
+        );
+    }
 
     return (
         <div className="BadgesList">
